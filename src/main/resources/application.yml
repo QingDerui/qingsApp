@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+
+# MyBatis配置
+datasources:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  db1:
+    jdbcUrl: jdbc:mysql://2.tcp.vip.cpolar.cn:11339/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 111111
+    mapper-locations: classpath:/mapper/db1/*.xml

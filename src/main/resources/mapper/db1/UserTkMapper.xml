@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboottest.data.mapper.db1.UserTkMapper">
+
+    <resultMap type="com.example.springboottest.data.entity.User" id="baseMapper">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="token" column="token"/>
+    </resultMap>
+
+    <select id="selectUser" resultMap="baseMapper">
+        select * from user where username = #{name} and password = #{password}
+    </select>
+</mapper>
